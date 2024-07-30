@@ -1,0 +1,483 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+    font-family: "Poppins", sans-serif;
+    background-color: #080808;
+    color: #fff;    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+html{
+    /* scrolling for each nav click */
+    scroll-behavior: smooth;
+}
+/* header styling */
+#home{
+    width: 100%;
+    height: 100vh;
+    background-image: url("images/einstein-removebg-preview.png");
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+/* navigation */
+.container{
+    padding: 5px 10%;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 100px;
+}
+
+i{
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-family: inherit;
+    position: relative;
+}
+
+/* making an underline hover effect */
+nav ul li a::after{  
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s ease-in-out;
+}
+
+nav ul li a:hover::after{
+    width: 80%;
+}
+
+/* changing the position and font size also */
+.header-text{
+    /* add space from the top by using the margin property */
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.header-text span{
+    color: #ff004f;
+}
+
+/* -----------About---------- */
+#bio{
+    padding: 20px 0;
+    color: #ababab;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    /* means the width for the coloum will be 35% */
+    flex-basis: 35%;
+}
+
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-col-2{
+    flex-basis: 60%;
+}
+
+.about-col-2 h1{
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+    font-family: inherit;
+}
+
+.title{
+    display: flex;
+    margin: 10px 0 20px;
+}
+
+.sub-title{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+
+/* adding underline hovering effect */
+.sub-title::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+/* adding a class name to the subtitle 
+class to give it full width*/
+.sub-title.active::after{
+    width: 50%;
+}
+
+/* hiding the content of the experience
+and education when clicked to open by user */
+.content{
+    display: none;
+}
+.content ul li{
+    list-style-type: none;
+    margin: 10px 0;
+}
+
+.content ul li span{
+    color: #ff004f;
+    font-size: 15px;
+}
+
+/* making the skill content open */
+.content.show{
+    display: block;
+}
+
+/* achievements */
+#goals{
+    padding: 30px 0;
+}
+
+#goals h1{
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+    font-family: inherit;
+}
+
+.goals{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.goals div{
+    background: #262626;
+    padding: 40px;
+    font-size: 18px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.goals div h2{
+    font-size: 30px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.goals div a{
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+/* hovering effect on the goals class */
+.goals div:hover{
+    background: #45cf99;
+    /* moving it up with the transform property */
+    transform: translateY(-10px);
+}
+
+/* motivations */
+#quote{
+    padding: 50px 0;
+}
+
+.motivations{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.quotes{
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.quotes img{
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* gallery */
+#picture{
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.gallery-item{
+    display: inline-block;
+    margin: 0.5%;
+    width: 30%;
+    box-sizing: border-box;
+}
+
+.gallery-item img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    margin: 10px 20px;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-item img:hover{
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.movie{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* flex-direction: column;
+    flex-wrap: wrap; */
+}
+
+.sub-movie{
+    margin: 10px;
+}
+
+iframe{
+    max-width: 100%;
+}
+
+/* contact */
+#number{
+    padding: 50px 0;
+}
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.contact-left p a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.icons{
+    margin-top: 30px;
+}
+.icons a{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 30px;
+}
+.icons .fb{
+    color: #1877f2;
+}
+.icons .ig{
+    color: #c13584;
+}
+.icons .yt{
+    color: #ff0000;
+}
+.icons .x{
+    color: #1da1f2;
+}
+.icons .link{
+    color: #0a66c2;
+}
+
+/* styling the right form */
+.contact-right form{
+    width: 100%;
+}
+/* styling the input and textarea */
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    color: #fff;
+    padding: 15px;
+    margin: 15px 0;
+    font-size: 20px;
+    border-radius: 6px;
+}
+
+.btn2{
+    display: block;
+    width: fit-content;
+    margin-top: 20px;
+    background-color: #080808;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    border: 1px solid #ff004f;
+    padding: 14px 60px;
+    border-radius: 6px;
+    transition: background 0.5s ease-in-out;
+}
+.btn2:hover{
+    background: #ff004f;
+}
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    font-weight: 300;
+    margin-top: 20px;
+    background: #262626;
+}
+.copyright p a{
+    text-decoration: none;
+    color: #fff;
+}
+/* making the mobile view icon hidden in desktop view*/
+nav .fa-sharp{
+    display: none;
+}
+
+/* mobile view */
+@media only screen and (max-width: 600px){
+    #home{
+        background-image: url(images/einstein_bg.jfif);     
+    }    
+    
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    
+    .header-text h1{
+        font-size: 30px;
+    }
+    /* making the icon appear in mobile view*/
+    nav .fa-sharp{
+        display: block;
+        font-size: 25px;
+    }
+    /* hiding the menu list */
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -240px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fa-sharp{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .title{
+        font-size: 40px;
+    }
+
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    /* giving space at the bottom */
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    /* decreasing font size in the .about class */
+    .about-col-2{
+        font-size: 14px;
+    }   
+
+    .sub-title{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    
+    .movie{
+        display: block;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    .gallery-item{
+        display: block;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    /* contact */
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+
+    .copyright{
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albert Einstein</title>
+    <link rel="stylesheet" href="main.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+</head>
+<body>
+    <!-- header -->
+    <div id="home">
+    <!-- navigation bar inside the header -->
+        <div class="container">
+            <nav>
+                <img src="images/icons8-albert-einstein-96.png" alt="" class="logo">
+                <ul id="side_menu">
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#bio">Biography</a>
+                    </li>
+                    <li>
+                        <a href="#goals">Achievement</a>
+                    </li>
+                    <li>
+                        <a href="#quote">Quotes</a>
+                    </li>
+                    <li>
+                        <a href="#picture">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="#number">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#" id="darkMode" class="dark-mode-button">
+                            <i class="fa-solid fa-moon"></i>
+                        </a>
+                    </li>
+                    <!-- adding a close icon on mobile view -->
+                    <i class="fa-sharp fa-solid fa-xmark" onclick="closeMenu()"></i>
+                </ul>
+                <!-- adding a menu icon on mobile view -->
+                <i class="fa-sharp fa-solid fa-bars" onclick="openMenu()"></i>
+            </nav>
+            <!-- adding text and title -->
+            <div class="header-text">
+                <p>Theoretical Physicist</p>
+                <h1>Albert <span>Einstein</span></h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- bio -->
+    <div id="bio">
+        <div class="container">
+            <!-- creating 2 coloums -->
+            <div class="row">
+                <!-- first coloum for image -->
+                <div class="about-col-1">
+                    <img src="images/einstien portrait.jpg">
+                </div>
+                <!-- second coloum for text -->
+                <div class="about-col-2">
+                    <h1>Biography</h1>
+                    <p>
+                        Albert Einstein &#40;1879-1955&#41; was a German-born theoritical physicist who is widely regarded as one of the greatest scientists of all time. 
+                        He is best known for developing the theory of relativity, which relovutionized our understanding of space🚀, time⏲, and gravity🌍. His equation &#40;E=mc^2&#41; demonstrated the equivalence of mass and energy. In 1921, he recieved the Noble Prize in Physics for his explanation of the photoelectric effects. Fleeing Nazi Germany in 1933, he settled in the United States, joining the institute for Advanced Study in Princeton.
+                        Einstein's work profoundly impacted scientific thought and technology, establishing him as one of history's most influential scientists.
+                    </p>
+                    <!-- titles -->
+                    <div class="title">
+                    <!-- adding javascript click event to the subtitle class -->
+                        <p class="sub-title active" onclick="press('skills')">
+                            Skills
+                        </p>
+                        <p class="sub-title" onclick="press('experience')">
+                            Experience
+                        </p>
+                        <p class="sub-title" onclick="press('education')">
+                            Education
+                        </p>
+                    </div>
+                    <!-- contents of each title -->
+                    <div class="content show" id="skills">
+                        <ul>
+                            <li>
+                                <span>Theoretical Analysis</span><br>Theoretical frameworks and equations
+                            </li>
+                            <li>
+                                <span>Mathematical Proficiency</span><br>Scientific insights and theories formulation
+                            </li>
+                            <li>
+                                <span>Innovative Thinking</span><br>Revolutionary Ideas and conventional paradigms
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content" id="experience">
+                        <ul>
+                            <li>
+                                <span>1939</span><br>Initiation Contribution of Manhattan Project on Atomic bomb development
+                            </li>
+                            <li>
+                                <span>1915</span><br>General Theory of Relativity Publishment
+                            </li>
+                            <li>
+                                <span>1921</span><br>Quantum Theory Development with Photoelectric Effect Explanation
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content" id="education">
+                        <ul>
+                            <li>
+                                <span>1896</span><br>Swiss Federal Polytechnic&#40;ETH Zurich&#41;
+                            </li>
+                            <li>
+                                <span>1905</span><br>Ph.D.University of Zurich
+                            </li>
+                            <li>
+                                <span>1909</span><br>Patent Office Work
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- goals -->
+     <div id="goals">
+        <div class="container">
+           <h1>Achievements</h1> 
+           <!-- adding list of achievements -->
+            <div class="goals">
+                <!-- adding achievements, descriptions 
+                 and learn more links-->
+                 <div>
+                    <h2>
+                        Theory of Special Relativity &#40;1905&#41;
+                    </h2>
+                    <p>
+                        Einstein introduced the theory of special relativity which relovutionized the understanding of space🚀 and time⏲. <br>
+                        The thory is encapsulated in the famous equation &#40;E = mc^2&#41;, indicating that energy and mass are interchangeable.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Special_relativity">
+                        Special Relativity - ikipedia
+                    </a>
+                 </div>
+                 <div>
+                    <h2>
+                        Photoelectric Effect &#40;1905&#41;
+                    </h2>
+                    <p>
+                        Einstein explained the photoelectric effect by proposing that light is composed of particles called photons. This work provided crucial evidence for quantum theory and won him the Noble Prize in Physics in 1921.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Photoelectric_effect">
+                        Photoelectric Effect - Wikipedia
+                    </a>
+                 </div>
+                 <div>
+                    <h2>
+                        Einstein Field Equations &#40;1915&#41;
+                    </h2>
+                    <p>
+                        As part of general relativity, Einstein formulated the Einstein field equations, which describe how matter and energy in the universe🌌 influence the curvature of spacetime.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Einstein_field_equations">
+                        Einstein Field Equations - Wikipedia
+                    </a>
+                 </div>
+                 <div>
+                    <h2>
+                        Brownian Motion &#40;1905&#41;
+                    </h2>
+                    <p>
+                        Einstein provided a mathematical explanation for Brownian motion, the random movement of particles suspended in a fluid. This work provided empirical evidence for the existence of atoms and molecules.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Brownian_motion">
+                        Brownian Motion - Wikipedia
+                    </a>
+                 </div>
+                 <div>
+                    <h2>
+                        Bose-Einstein Condensate &#40;1924&#41;
+                    </h2>
+                    <p>
+                        Collaborating with Indian physicist Satyendra Nath Bose, Einstein predicted a new state of matter known as the Bose-Einstein condensate. This state occurs at temperature close to absolute zero, where a group of bosons occupies the same quantum state.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Bose%E2%80%93Einstein_condensate">
+                        Bose Einstein Condensate - Wikipedia
+                    </a>
+                 </div>
+                 <div>
+                    <h2>
+                        Perihelion Precession of Mercury &#40;1915&#41;
+                    </h2>
+                    <p>
+                        Einstein's theory of general relativity explained the anomalous precession of Mercury's orbit💫, which classical Newtonian mechanics could not fully account for.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Tests_of_general_relativity#Perihelion_precession_of_Mercury">
+                        Perihelion Precession of Mercury - Wikipedia
+                    </a>
+                 </div>
+                 <div>
+                    <h2>
+                        EPR Paradox&#40;1935&#41;
+                    </h2>
+                    <p>
+                        Einstein-Podolsky-Rosen paradox challenged the completeness of quantum mechanics, arguing that the theory could not provide a full description of physical reality. <br>
+                        This work led to significant debates and further advancement in quantum theory.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/EPR_paradox">
+                        EPR Paradox - Wikipedia
+                    </a>
+                 </div>
+                 <div>
+                    <h2>
+                        Influence on Philosophy of Science
+                    </h2>
+                    <p>
+                        Beyond his scientific achievements, Einstein's work has profound impact on the philosophy of science. His ideas on the nature of reality, the role of observation in physics, and the influence of scientific theories have influenced many thinkers.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Philosophy_of_physics">
+                        Philosophy of Physics - Wikipedia
+                    </a>
+                 </div>
+            </div>
+        </div>
+     </div>
+    
+     <!-- motivations -->
+     <div id="quote">
+        <div class="container">
+            <h1>Motivational Quotes</h1>
+            <div class="motivations">
+                <div class="quotes">
+                    <img src="images/learning.jpg" alt="">
+                </div>
+                <div class="quotes">
+                    <img src="images/life.jpg" alt="" height="auto" width="320">
+                </div>
+                <div class="quotes">
+                    <img src="images/arrogance.jpg" alt=""
+                    width="320" height="auto">
+                </div>
+                <div class="quotes">
+                    <img src="images/genius.jpg" alt=""
+                    width="320" height="auto">
+                </div>
+                <div class="quotes">
+                    <img src="images/revenge.jpg" alt=""
+                    width="320">
+                </div>
+                <div class="quotes">
+                    <img src="images/value.jpg" alt=""
+                    height="150">
+                </div>
+                <div class="quotes">
+                    <img src="images/bicycle.jpg" alt=""
+                    width="320">
+                </div>
+                <div class="quotes">
+                    <img src="images/download.jpg" alt=""
+                    width="320">
+                </div>
+                <div class="quotes">
+                    <img src="images/mistake.jpg" alt=""
+                    width="320">
+                </div>
+            </div>
+        </div>
+     </div>
+
+     <!-- gallery -->
+      <div id="picture">
+        <div class="container">
+            <h1>Gallery</h1>
+            <div class="gallery-item">
+                <img src="images/einstein-gallery/einstein (1).jpg" alt="image1.jpg">
+            </div>
+            <div class="gallery-item">
+                <img src="images/einstein-gallery/einstein (2).jpg" alt="image2.jpg">
+            </div>
+            <div class="gallery-item">
+                <img src="images/einstein-gallery/einstein (3).jpg" alt="image2.jpg">
+            </div>
+            <div class="gallery-item">
+                <img src="images/einstein-gallery/einstein (4).jpg" alt="image4.jpg">
+            </div>
+            <div class="gallery-item">
+                <img src="images/einstein-gallery/einstein (5).jpg" alt="image5.jpg">
+            </div>
+            <div class="gallery-item">
+                <img src="images/einstein-gallery/einstein (6).jpg" alt="image6.jpg">
+            </div>
+            <div class="gallery-item">
+                <img src="images/einstein-gallery/einstein (7).jpg" alt="image7.jpg">
+            </div>
+            <div class="gallery-item">
+                <img src="images/einstein-gallery/einstein (8).jpg" alt="image8.jpg">
+            </div>
+            <div class="gallery-item">
+                <img src="images/einstein-gallery/einstein (9).jpg" alt="image9.jpg">
+            </div>
+            <div class="gallery-item">
+                <img src="images/einstein-gallery/einstein (10).jpg" alt="image10.jpg">
+            </div>
+            <div class="gallery-item">
+                <img src="images/einstein-gallery/einstein (11).jpg" alt="image11.jpg">
+            </div>
+            <div class="gallery-item">
+                <img src="images/einstein-gallery/einstein (12).jpg" alt="image12.jpg">
+            </div>
+            <div class="gallery-item">
+                <img src="images/einstein-gallery/einstein (13).jpg" alt="image13.jpg">
+            </div>
+            <div class="gallery-item">
+                <img src="images/einstein-gallery/einstein (14).jpg" alt="image14.jpg">
+            </div>
+            <div class="gallery-item">
+                <img src="images/images(2).jpeg" alt="">
+            </div>
+            <!-- videos of einstein -->
+            <h2>Einstein Documentaries</h2>
+            <div class="movie">
+                <div class="sub-movie">    
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/GDnxkC5eTgE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="sub-movie">              
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/7CZyDPELXs4?si=9szTe5J0kLTmtfyB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+      </div>
+    
+    <!-- contact -->
+    <div id="number">
+        <div class="container">
+            <!-- two rows one left and right -->
+            <div class="row">
+                <div class="contact-left">
+                    <h1>Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>contact <a href="https://einsteinmed.edu/about/contact-us.asp">info@alberteinstein.com</a></p>
+                    <div class="icons">
+                        <a href="https://www.facebook.com/albert.einstein.fans/"><i class="fa-brands fa-facebook fb"></i></a>
+                        <a href="https://www.instagram.com/alberteinstein/"><i class="fab fa-instagram ig"></i></a>
+                        <a href="https://www.youtube.com/alberteinstein"><i class="fab fa-youtube fa-1 yt"></i></a>
+                        <a href="https://x.com/alberteinstein"><i class="fab fa-twitter x"></i></a>
+                        <a href="https://www.linkedin.com/school/albert-einstein-college-of-medicine/"><i class="fab fa-linkedin-in link"></i></a>
+                    </div>
+                </div>
+                <!-- filling of form details on the right -->
+                <div class="contact-right">
+                    <form action="">
+                        <!-- getting input for name, email, and message text area -->
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="example@gmail.com" required>
+                        <textarea name="Message" rows="6" placeholder="Type a Message"></textarea>
+                        <button type="submit" class="btn2">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright &copy; 2024  <a href="https://www.alberteinstein.com">Albert Einstein</a></p>
+        </div>
+    </div>
+    <script src="main.js" defer></script>
+</body>
+</html>
